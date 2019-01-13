@@ -7,8 +7,11 @@ defmodule Api.Application do
   require Logger
 
   def start(_type, _args) do
+    import Supervisor.Spec
+
     children = [
-      {Plug.Cowboy, scheme: :http, plug: Api.Router, options: [port: 8080]}
+      {Plug.Cowboy, scheme: :http, plug: Api.Router, options: [port: 8080]},
+      worker(Mongo, [[name: :mongo, database: "test", pool: DBConnection.Poolboy]])
     ]
     opts = [strategy: :one_for_one, name: Api.Supervisor]
 

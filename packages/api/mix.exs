@@ -22,7 +22,10 @@ defmodule Api.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:mongodb, ">= 0.0.0"},
+      {:poolboy, ">= 0.0.0"},
+      {:poison, "~> 4.0.0"}
     ]
   end
 end
