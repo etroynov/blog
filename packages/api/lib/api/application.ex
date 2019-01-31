@@ -1,7 +1,6 @@
 defmodule Api.Application do
-  # See https://hexdocs.pm/elixir/Application.html
-  # for more information on OTP Applications
   @moduledoc false
+  import Supervisor.Spec
 
   use Application
   require Logger
@@ -10,13 +9,23 @@ defmodule Api.Application do
     import Supervisor.Spec
 
     children = [
-      {Plug.Cowboy, scheme: :http, plug: Api.Router, options: [port: 8080]},
-      worker(Mongo, [[name: :mongo, database: "test", pool: DBConnection.Poolboy]])
+      # 1. Start App
+      {Plug.Cowboy, scheme: :http, plug: Api.Router, options: [port: 2000]},
+
+      # 2. Start MongoDB
+      worker(Mongo, [[name: :mongo, database: "blog", pool: DBConnection.Poolboy]])
     ]
+
     opts = [strategy: :one_for_one, name: Api.Supervisor]
 
-    Logger.info("Starting application...")
+    Logger.info("Starting application on port: 2000")
 
     Supervisor.start_link(children, opts)
+  end
+
+  defimpl Poison.Encoder, for: BSON.ObjectId do
+    def encode(id, options) do
+      BSON.ObjectId.encode!(id) |> Poison.Encoder.encode(options)
+    end
   end
 end
