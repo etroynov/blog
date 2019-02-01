@@ -5,7 +5,7 @@ defmodule Api.Router do
   plug(:dispatch)
 
   get "/" do
-    data = Mongo.find(:mongo, "posts", %{}, pool: DBConnection.Poolboy)
+    data = Mongo.find(:mongo, "organizations", %{}, limit: 5, pool: DBConnection.Poolboy)
       |> Enum.to_list
       |> Poison.encode!
 

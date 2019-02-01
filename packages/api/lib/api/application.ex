@@ -13,7 +13,7 @@ defmodule Api.Application do
       {Plug.Cowboy, scheme: :http, plug: Api.Router, options: [port: 2000]},
 
       # 2. Start MongoDB
-      worker(Mongo, [[name: :mongo, database: "blog", pool: DBConnection.Poolboy]])
+      worker(Mongo, [[name: :mongo, database: "resto", pool: DBConnection.Poolboy]])
     ]
 
     opts = [strategy: :one_for_one, name: Api.Supervisor]
