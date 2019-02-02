@@ -1,10 +1,41 @@
 {
-  "name": "site",
+  "name": "@blog/site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-typescript": "^1.1.1",
+    "classnames": "^2.2.6",
+    "next": "^7.0.2",
+    "node-sass": "^4.11.0",
+    "ramda": "^0.26.1",
+    "react": "^16.8.0-alpha.1",
+    "react-dom": "^16.8.0-alpha.1"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.7",
+    "@types/next": "^7.0.8",
+    "@types/ramda": "^0.25.47",
+    "@types/react": "^16.8.1",
+    "@types/react-dom": "^16.0.11",
+    "typescript": "^3.2.4",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-consistent-codestyle": "^1.15.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-immutable": "^5.1.2",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.5.1"
   },
   "keywords": [],
   "author": "",

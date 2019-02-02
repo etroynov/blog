@@ -11,7 +11,7 @@ defmodule Api.Router do
   plug(:dispatch)
 
   get "/" do
-    data = Mongo.find(:mongo, "organizations", %{}, limit: 5, pool: DBConnection.Poolboy)
+    data = Mongo.find(:mongo, "posts", %{}, limit: 5, pool: DBConnection.Poolboy)
       |> json
 
     send_resp(conn, 200, data)

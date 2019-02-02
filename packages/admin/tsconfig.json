@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+
+    // Typecheck
+    "removeComments": true,
+    "pretty": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "types": [],
+    "sourceMap": true,
+
+    // Pragma
+    "jsx": "react",
+
+    // Modules
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es5",
+
+    // Libs
+    "lib": ["dom", "es2015", "es2016.array.include"],
+
+    // Dir
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    "paths": {
+      "@": ["src"]
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/styles.chunk.css","sources":["webpack:///./components/common/Header/styles.scss"],"sourcesContent":[".container {\n  background: #1D3B51; }\n\n.logo {\n  width: 140px;\n  height: 40px;\n  background: url(/static/img/logo.png) center/contain no-repeat; }\n"],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;;","sourceRoot":""}
