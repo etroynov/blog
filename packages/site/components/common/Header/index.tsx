@@ -17,6 +17,5 @@ import styles from './styles.scss';
 export default () => (
   <header className={styles.container}>
     <div className={styles.logo} />
-    test
   </header>
 );
