@@ -23,7 +23,7 @@ defmodule Api.MixProject do
   defp deps do
     [
       {:plug_cowboy, "~> 2.0"},
-      {:mongodb, ">= 0.0.0"},
+      {:mongodb, git: "https://github.com/ankhers/mongodb.git"},
       {:poolboy, ">= 0.0.0"},
       {:poison, "~> 4.0.0"}
     ]
