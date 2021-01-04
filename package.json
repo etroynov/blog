@@ -20,6 +20,12 @@
   },
   "homepage": "https://github.com/etroynov/blog#readme",
   "dependencies": {
-    "next": "^10.0.4"
+    "next": "^10.0.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0"
   }
 }
