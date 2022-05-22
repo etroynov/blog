@@ -1,7 +1,7 @@
 
 import styles from './index.module.css';
 
-export function Block({ children }: any) {
+export function Container({ children }: any) {
   return (
     <div className={ styles.container }>{children}</div>
   );
